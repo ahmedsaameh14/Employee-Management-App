@@ -1,0 +1,110 @@
+/* Navbar Custom Styling */
+.navbar-custom {
+  /* Changed from gradient purple to light gray background */
+  background: #000000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.brand-custom {
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* Changed from white to dark gray text */
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-left: 5rem;
+}
+
+.brand-custom:hover {
+  transform: translateY(-2px);
+  /* Updated text shadow to work with dark text */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+.nav-link-custom {
+  /* Changed from white to dark gray text */
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  margin-right: 5rem;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Changed underline color from white to blue */
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  /* Changed hover color from white to darker gray */
+  color: #c1cad3 !important;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.nav-link-custom.active {
+  /* Changed active color from white to dark blue */
+  color: #2c3e50 !important;
+  font-weight: 600;
+}
+
+.nav-link-custom.active::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  /* Updated outline color to match new light theme */
+  outline: 2px solid #3498db;
+  border-radius: 4px;
+}
+
+.navbar-toggler-icon {
+  /* Updated hamburger icon color to dark gray */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23555555' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .nav-link-custom {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link-custom::after {
+    display: none;
+  }
+
+  .nav-link-custom.active {
+    /* Updated mobile active state background to light blue */
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
